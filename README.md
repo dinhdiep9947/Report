@@ -8,7 +8,7 @@ Một hệ thống thời gian thực (RTOS - Real Time Operating System) đư�
 
 ![](RTOS.png)
 
-### Quy luật của hệ thống RTOS:
+#### Quy luật của hệ thống RTOS:
 * Thời gian yêu cầu cho việc hoàn thành bất kỳ các function nào phải có hạn và có thể biết trước.
 * Thời gian phản hồi tối đa phải tính toán được và được đảm bảo.
 * Số chu kỳ yêu cầu để thực thi một toán tử đã cho phải luôn như nhau.
@@ -21,9 +21,12 @@ Một hệ thống thời gian thực (RTOS - Real Time Operating System) đư�
 
 Chúng ta không cần RTOS để viết phần mềm nhúng hiệu quả nhưng ứng dụng dần dần tăng kích thước và độ phức tạp thì RTOS sẽ rất hữu ích. RTOS cho phép các ứng dụng phức tạp chia thành một tập nhỏ hơn và hơn nữa có thể quản lý các tác vụ. 
 
-### Tại sao nên sử dụng RTOS
+#### Tại sao nên sử dụng RTOS
 * Đơn giản hóa việc chia sẻ nguồn tài nguyên: cung cấp cơ chế tập trung cho việc phân xử các yêu cho các nguồn tài nguyên như bộ nhớ và MCU ngoại vi.
 * Phát triển và debug dễ dàng hơn
   * Các thành viên trong nhóm có thể làm việc độc lập.
   * Lập trình viên có thể tránh việc giải quyết chi tiết ngắt, timer và phần cứng.
   * Ứng dụng có thể bảo trì dễ dàng hơn.
+
+## FreeRTOS
+FreeRTOS là hệ thống thời gian thực miễn phí và mã nguồn mở được phát triển bởi Real Time Engineers Ltd. Mục đích của nó được phát triển để phù hợp với các hệ thống nhúng nhỏ và 
