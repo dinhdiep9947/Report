@@ -6,7 +6,7 @@ Phần này sẽ mô tả chính xác hơn nữa về cách có thể gọi ra m
 
 Khi một tác vụ chuyển trạng thái từ "not running" sang "running", ta gọi đó là "swapped in" hay "switched in", ngược lại là "swapped out" hay "switched out".
 
-*CMSIS RTOS đưa ra task như Thread, trong bài này task được dùng thay thế nghĩa cho thread*
+*CMSIS-RTOS đưa ra task như Thread, trong bài này task được dùng thay thế nghĩa cho thread*
 
 Một task có thể có một trong những trạng thái:
 * **Running:** task hiện tại đang thực thi. Chỉ có **một** task có thể ở trạng thái này tại một thời điểm bất kỳ.
