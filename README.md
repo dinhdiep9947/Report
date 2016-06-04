@@ -12,6 +12,9 @@ freeRTOS là một hệ thế thống Real-Time miễn phí và mã nguồn mở
   * Sử dụng các tác vụ rất cơ bản và quản lý bộ nhớ.
   * API chỉ đủ cho việc đồng bộ hóa.
 
+
+![](RTOS.png)
+
 Quy luật của hệ thống freeRTOS:
 * Thời gian yêu cầu cho việc hoàn thành bất kỳ các function nào phải có hạn và có thể biết trước.
 * Thời gian phản hồi tối đa phải tính toán được và được đảm bảo.
