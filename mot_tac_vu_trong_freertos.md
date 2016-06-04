@@ -26,6 +26,7 @@ Kernel được bắt đầu khi sử dụng API osKernelStart(). Khi bắt đ�
 *Các hàm sử dụng trong bài này là HAL API được tạo từ phần mêm CubeMX của ST*
 1. Định nghĩa task 
 ![](Untitled1.png)
+  a. Tên
   
 
 
