@@ -26,7 +26,12 @@ Kernel được bắt đầu khi sử dụng API osKernelStart(). Khi bắt đ�
 *Các hàm sử dụng trong bài này là HAL API được tạo từ phần mêm CubeMX của ST*
 1. Định nghĩa task 
 ![](Untitled1.png)
-  a. Tên
+  a. Tên của task 
+  b. Tên hàm vào của task
+  c. Khởi tạo mức ưu tiên của task 
+  d. Số task sẵn có
+  e. Kích thước ngăn xếp (byte) yêu cầu bởi hàm task 
+2. Tạo task và cấp phát bộ nhớ
   
 
 
