@@ -27,7 +27,3 @@ Chúng ta không cần RTOS để viết phần mềm nhúng hiệu quả nhưng
   * Các thành viên trong nhóm có thể làm việc độc lập.
   * Lập trình viên có thể tránh việc giải quyết chi tiết ngắt, timer và phần cứng.
   * Ứng dụng có thể bảo trì dễ dàng hơn.
-
-
-
-
