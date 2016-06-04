@@ -46,8 +46,20 @@ CMSIS-RTOS định nghĩa một vài mức ưu tiên:
 * osPriorityHigh
 * osPriorityRealtime
 
+Một vài task thực hiện các thông tin liên quan có sẵn:
+* osThreadGetID()
+* osThreadGetPriority()
 
-  
+Điều khiển chuyển task tiếp theo
+* osThreadYield()
+
+Delay task một lượng thời gian cho trước
+* osDelay()
+
+Xóa một task 
+* osThreadTerminate()
+
+
 
 
 
