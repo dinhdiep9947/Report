@@ -10,7 +10,10 @@ Mỗi tác vụ có thể có 1 trong ba trạng thái chính:
 * **Blocked:** khi tác vụ không có đủ các tài nguyên cần thiết để chạy thì nó sẽ được đưa về trạng thái này.
 
 Để lập lịch cho tác vụ, có 3 kỹ thuật được áp dung:
-* **Co-operative scheduling:** mỗi task được thực thi đến khi kết thúc quá trình thì task tiếp theo mới được thực thi.
+* **Co-operative scheduling** 
+  * Giống như code thông thường.
+  * Các task chỉ có thể được thực thi nếu task đang chạy "give up"/yield.
+* **Round Robin Scheduling:** mỗi task được chia một khe thời gian cố định, nếu trong khoảng thời gian được chia đó mà task chưa thực hiện xong thì sẽ bị tạm dừng, chờ đến lượt tiếp theo để thực hiện tiếp công việc sau khi hệ thống xử lý hết một lượt các task.
 
 
 
