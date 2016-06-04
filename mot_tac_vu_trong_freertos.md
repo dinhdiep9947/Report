@@ -10,7 +10,7 @@ Khi một tác vụ chuyển trạng thái từ "not running" sang "running", ta
 
 Một task có thể có một trong những trạng thái:
 * **RUNNING:** task hiện tại đang thực thi. Chỉ có **một** task có thể ở trạng thái này tại một thời điểm bất kỳ.
-* **READY:** task này đủ để thực thi nhưng không chạy do một task khác có độ ưu tiên ngang bằng hay cao hơn đang được thực thi.
+* **READY:** task này đủ điều kiện để thực thi nhưng không chạy do một task khác có độ ưu tiên ngang bằng hay cao hơn đang được thực thi.
 * **WAITING:** các task đang chờ một sự kiện xảy ra
   * Điển hình là sau khi gọi osSemaphoreWait(), osMutexWAit()...
 * **INACTIVE (BLOCKED):** các task này không được tạo hoặc bị giới hạn trong trạng thái này. 
