@@ -15,5 +15,8 @@ Mỗi tác vụ có thể có 1 trong ba trạng thái chính:
   * Các task chỉ có thể được thực thi nếu task đang chạy "give up"/yield.
 * **Round Robin Scheduling:** mỗi task được chia một khe thời gian cố định, nếu trong khoảng thời gian được chia đó mà task chưa thực hiện xong thì sẽ bị tạm dừng, chờ đến lượt tiếp theo để thực hiện tiếp công việc sau khi hệ thống xử lý hết một lượt các task.
 
+![](round robin.png)
+
+
 
 
