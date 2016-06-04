@@ -41,7 +41,7 @@ Kernel được bắt đầu khi sử dụng API osKernelStart(). Khi bắt đ�
 ![](Untitled2.png)
   a. Định nghĩa task
   
-  b. Con trỏ định danh tử cho phép điều khiển task. Nếu task được điều khiển trong tương lai, thì có thể để NULL.
+  b. Con trỏ định danh tử cho phép điều khiển task. Nếu task không được điều khiển trong tương lai, thì có thể để NULL.
   
 CMSIS-RTOS định nghĩa một vài mức ưu tiên:
 * osPriorityIdle - ưu tiên thấp nhất
