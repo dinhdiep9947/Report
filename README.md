@@ -1,11 +1,11 @@
-# Hệ thống Real Time là gì?
+# Hệ thống RTOS là gì?
 _______________________________
-Một hệ thống thời gian thực được thiết kế cho các nhiệm vụ đặc biêt:
+Một hệ thống thời gian thực (RTOS - Real Time Operating System) được thiết kế cho các nhiệm vụ đặc biêt:
   * Các ứng dụng cần được thực thi với thời gian thật chính xác, các lỗi phát sinh cần được cô lập và xử lý nhanh chóng.
   * Phải đáp lại các ngõ vào hay các sự kiện với thời gian giới hạn.
   * Một đáp ứng trễ là một đáp ứng sai.
 
-# freeRTOS là gì?
+# RTOS là gì?
 ________________________________
 freeRTOS là một hệ thế thống Real-Time miễn phí và mã nguồn mở được phát triển bởi Real Time Engineers Ltd. Mục đích của nó phát triển vừa cho các hệ thống nhúng rất nhỏ và chỉ bổ sung các chức năng rất tối thiểu:
   * Cho phép nhiều chương trình thực thi tại cùng một thời điểm (multi-tasking).
