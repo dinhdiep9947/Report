@@ -29,4 +29,16 @@ Chúng ta không cần RTOS để viết phần mềm nhúng hiệu quả nhưng
   * Ứng dụng có thể bảo trì dễ dàng hơn.
 
 ## FreeRTOS
-FreeRTOS là hệ thống thời gian thực miễn phí và mã nguồn mở được phát triển bởi Real Time Engineers Ltd. Mục đích của nó được phát triển để phù hợp với các hệ thống nhúng nhỏ và 
+FreeRTOS là hệ thống thời gian thực miễn phí và mã nguồn mở được phát triển bởi Real Time Engineers Ltd. Mục đích của nó được phát triển để phù hợp với các hệ thống nhúng rất nhỏ và chỉ bổ sung các tập funtion tối thiểu:
+* Điều khiển các tác vụ rất cơ bản và quản lý bộ nhớ.
+* API chỉ đủ cho việc đồng bộ.
+* Hoàn toàn không được cung cấp cho truyền thông internet, điều khiển các phần cứng mở rộng hay truy cập vào filesystem.
+
+#### Các đặc điểm chính 
+1. Quyền ưu tiên trước hay hợp tác kernel thời gian thực.
+2. Small footprint ( 4.3Kbytes trên ARM7 sau khi biên dịch).
+3. Việc đồng bộ và giao tiếp inter-task sử dụng
+  * Hàng đợi thông tin (message queues).
+  * Binary và counting semaphores.
+  * Mutexes.
+  * Nhóm các sự kiện.
