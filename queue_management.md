@@ -43,6 +43,16 @@ Cả hai Task A và B đều có cùng một mức ưu tiên.
 4. Task B đọc một quá trị trong queue. Nó sẽ nhận giá trị đứng đằng trước của queue.
 5. Task B gỡ một item. Item thứ 2 được chuyển lên trước trong queue. 4 chỗ trống bây giờ sẵn có.
 
+## STM32CubeMX - Queue
+![](Untitled10.png)
+Các thành phần sau có thể sử đổi
+* Name
+* Size of queue
+* Size of item in queue
+
+
+
+
 
 
 
