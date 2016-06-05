@@ -3,5 +3,5 @@ Queue la một kỹ thuật làm cơ sở cho mọi truyền thông các task v�
 
 Chúng cho phép đọc và ghi bởi vài task khác nhau, và không theo một task một cách riêng biệt. Một queue thường là một FIFO nghĩa là các thành phần được đọc trong khi đã được ghi. Cách xử lý này phụ thuộc vào phương thức ghi: hai function ghi có thể được sử dung để ghi hoặc tại lúc bắt đầu hoặc lúc kết thúc queue đó.
 ## Việc đọc trong một queue
-Khi một task đơn đọc trong một queue, nó được chuyển tới trạng thái "Blocked" và đưa trở lại "Ready" ngay khi dữ liệu được ghi vào trong queue bởi một task khác hoặc một ngắt. 
+Khi một task đơn đọc trong một queue, nó được chuyển tới trạng thái "Blocked" và đưa trở lại "Ready" ngay khi dữ liệu được ghi vào trong queue bởi một task khác hoặc một ngắt. Nếu có một số task cố gắng đọc một queue, task nào có mức ưu tiên cao nhất đọc đầu tiên. Cuối cùng, nếu có vài task có độ ưu tiên như nhau cố gắng đọc task, task yêu cầu đầu tiên được chọn.
 
