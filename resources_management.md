@@ -4,5 +4,7 @@ Binary semaphores là cách đơn giản hiệu quả nhất để đồng bộ 
 ![](Untitled11.png)
 ## Mutexes
 Mutexes được thiết kế để ngăn chặn việc loại trừ lẫn nhau hay việc đình trệ. Một mutex được sử dụng tương tự như một binary semaphore, trừ việc task lấy semaphore đó phải gửi lại. Điều nàu có thể thông qua với một token đã liên kết với resource để truy cập vào. Một task giữ token, làm việc với resource sau đó trả lại token. Trong lúc đó, không có một token nào khác được đưa cho mutex.
+![](Untitled12.png)
+
 
 
