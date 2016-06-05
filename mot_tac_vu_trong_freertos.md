@@ -64,6 +64,18 @@ Delay task một lượng thời gian cho trước
 Xóa một task 
 * osThreadTerminate()
 
+## Tạo task trong STM32CubeMX
+* Một task được tạo mặc định - defaultTask
+* Các thuộc tính sau thay đổi được:
+  * Tên
+  * Mức ưu tiên
+  * Kích thước ngăn xếp (words)
+  * Entry function
+  * Tùy chọn tạo code (Code Generation Option)
+* "Entry function" có thể được khai báo như là "weak" function bằng cách lựa chọn Code Generation Option -> As weak
+![](Untitled3.png)
+
+
 
 
 
