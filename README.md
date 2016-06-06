@@ -40,6 +40,7 @@ FreeRTOS là hệ thống thời gian thực miễn phí và mã nguồn mở đ
 * Hoàn toàn không được cung cấp cho truyền thông internet, điều khiển các phần cứng mở rộng hay truy cập vào filesystem.
 
 #### Các đặc điểm chính 
+
 1. Quyền ưu tiên trước hay hợp tác kernel thời gian thực.
 2. Small footprint ( 4.3Kbytes trên ARM7 sau khi biên dịch).
 3. Việc đồng bộ và giao tiếp inter-task sử dụng
