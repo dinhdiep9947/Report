@@ -56,6 +56,14 @@ Kỹ thuật kế thừa mức ưu tiên
 3. Mức ưu tiên của task A tạm thời tăng lên để task B cho phép task A thực thi.
 4. Task A phóng thích mutex và mức ưu tiên được khôi phục lại như trước cho phép task B tiếp tục thực thi.
 
+## STM32CubeMX - Mutex
+![](Untitled17.png)
+
+
+
+
+
+
   
 
 
