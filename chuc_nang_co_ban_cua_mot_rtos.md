@@ -6,6 +6,7 @@
 
 ## Scheduler
 Mỗi tác vụ có thể có 1 trong ba trạng thái chính:
+
 * **Ready to rung:** là trạng thái mà tác vụ đã đủ các tài nguyên để khởi chạy nhưng chưa chạy. Đây là trạng thái chuẩn bị của tác vụ.
 * **Running:** là trạng thái mà tác vụ đang được thực thi.
 * **Blocked:** khi tác vụ không có đủ các tài nguyên cần thiết để chạy thì nó sẽ được đưa về trạng thái này.
