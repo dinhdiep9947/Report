@@ -1,4 +1,5 @@
 # Chức năng cơ bản của một RTOS
+
 1. Bộ lập lịch (Scheduler)
 2. Các dịch vụ thời gian thực (Realtime Services)
 3. Đồng bộ và xử lý thông điệp (Synchronization và Messaging)
