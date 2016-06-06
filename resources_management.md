@@ -6,6 +6,7 @@ Binary semaphores là cách đơn giản hiệu quả nhất để đồng bộ 
 ## Counting semaphores
 Một counting semaphore là một semaphore mà có thể lấy được một vài lần (nhưng có giới hạn) trước khi nó không có sẵn. Nó duy trì một giá trị được tăng lên là semaphore được cho trước, và giảm xuống khi khi bị lấy đi. Nó có thể so sánh được với một queue với ít element nào đó. Khi nó được tạo ra, một counting semaphore có thể được khởi tạo sẵn sàng số lần tùy ý.
 ![](Untitled13.png)
+
 * Đặc điểm:
   * Có nhiều token
   * Đồng bộ nhiều hành động
