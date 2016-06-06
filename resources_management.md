@@ -6,5 +6,38 @@ Binary semaphores là cách đơn giản hiệu quả nhất để đồng bộ 
 Mutexes được thiết kế để ngăn chặn việc loại trừ lẫn nhau hay việc đình trệ. Một mutex được sử dụng tương tự như một binary semaphore, trừ việc task lấy semaphore đó phải gửi lại. Điều nàu có thể thông qua với một token đã liên kết với resource để truy cập vào. Một task giữ token, làm việc với resource sau đó trả lại token. Trong lúc đó, không có một token nào khác được đưa cho mutex.
 ![](Untitled12.png)
 
+## Counting semaphores
+Một counting semaphore là một semaphore mà có thể lấy được một vài lần (nhưng có giới hạn) trước khi nó không có sẵn. Nó duy trì một giá trị được tăng lên là semaphore được cho trước, và giảm xuống khi khi bị lấy đi. Nó có thể so sánh được với một queue với ít element nào đó. Khi nó được tạo ra, một counting semaphore có thể được khởi tạo sẵn sàng số lần tùy ý.
+![](Untitled13.png)
+* Đặc điểm:
+  * Có nhiều token
+  * Đồng bộ nhiều hành động
+* Mặc định, counting semaphore bị chặn trong cấu hình STM32CubeMX freeRTOS
+* Counting semaphore điển hình sử dụng để đếm các event hoặc quản lý resource.
+* Đếm event
+  * Một bộ điều khiển event sẽ "cho" một semaphore mỗi thời điểm mà event xảy ra (tăng giá trị đếm semaphore).
+  * Một bộ điều khiển task "lấy" một semaphore mỗi thời điểm nó xử lý một event (giảm giá trị đếm semaphore).
+  * Giá trị đếm là sự khác nhau giữa số event mà nó được xảy ra và số event mà nó đươc xử lý.
+* Quản lý resource
+  * Giá trị đếm cho biết số resource sẵn có.
+  * Để đạt được điều khiển của resource một task đầu tiên phải đạt được  việc giảm giá trị đếm semaphore. Khi giá trị đếm về 0 thì không có resource nào rảnh.
+  * Khi một task kết thúc với một resource nó "trả" semaphore lại bằng cách tăng giá trị đếm semaphore.
+
+## STM32CubeMX - Semaphore
+1. Định nghĩa semaphore
+> osSemaphoreDef (myCountingSem01)
+
+2. Tạo một semaphore
+![](Untitled14.png)
+  a. Tên của semaphore
+  b. Số token được tạo.
+  
+Task có thể giành được một semaphore
+> osSemaphoreWait(myCountingSem01Handle, osWaitForever);
+>                     ID/Handle            time-out value
+  
+
+
+
 
 
