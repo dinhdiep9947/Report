@@ -66,9 +66,11 @@ Một vài task thực hiện các thông tin liên quan có sẵn:
 * osThreadYield()
 
 Delay task một lượng thời gian cho trước
+
 * osDelay()
 
 Xóa một task 
+
 * osThreadTerminate()
 
 ## Tạo task trong STM32CubeMX
