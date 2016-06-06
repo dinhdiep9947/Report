@@ -74,6 +74,7 @@ Xóa một task
 * osThreadTerminate()
 
 ## Tạo task trong STM32CubeMX
+
 * Một task được tạo mặc định - defaultTask
 * Các thuộc tính sau thay đổi được:
   * Tên
