@@ -22,6 +22,7 @@ Một counting semaphore là một semaphore mà có thể lấy được một 
   * Khi một task kết thúc với một resource nó "trả" semaphore lại bằng cách tăng giá trị đếm semaphore.
 
 ## STM32CubeMX - Semaphore
+
 1. Định nghĩa semaphore
 > osSemaphoreDef (myCountingSem01)
 
