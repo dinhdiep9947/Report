@@ -33,6 +33,7 @@ Khi một task đơn đọc trong một queue, nó được chuyển tới trạ
 Việc ghi trong queue cũng tuân theo luật như việc đọc. Khi một task cố gắng ghi vào queue, nó phải chờ tới khi có được chỗ trống: task bị blocked cho tới khi task khác đọc queue và có khoảng trống.
 ### Cách tạo queue
 Độ dài của queue và độ rộng của nó (kích thước của các element của nó) được cho trước khi queue được tạo ra.
+
 * Bước 1: Định nghĩa queue
 ![](Untitled5.png)
   a. Tên của queue
@@ -60,6 +61,7 @@ Việc ghi trong queue cũng tuân theo luật như việc đọc. Khi một tas
   
   ![](Untitled9.png)
 Cả hai Task A và B đều có cùng một mức ưu tiên.
+
 1. Một queue được tạo ra cho phép task A và B giao tiếp. Queue có thể giữ tối đa 5 giá trị. Khi một queue được tạo ra, nó không có bất kỳ giá trị nào.
 2. Task A ghi một giá trị vào queue; giá trị được đưa ra sau.
 3. Task A lại gửi 1 giá trị khác. Queue bây giờ gồm có giá trị đã ghi lần trước và giá trị mới thêm vào. Giá trị lần trước còn lại đứng trước trong queue trong khi giá trị mới đứng ngay sau đó. Vẫn còn 3 chỗ trống.
