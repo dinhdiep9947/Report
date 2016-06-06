@@ -1,8 +1,6 @@
 # Queue management
 Queue la một kỹ thuật làm cơ sở cho mọi truyền thông các task và đồng bộ trong môi trường freeRTOS. Chúng là một chủ đề quan trọng không thể tránh được khi xây dựng những ứng dụng phức tạp với các task co-operating với task khác. Chúng được hiểu là để lưu trữ và độ dài dữ liệu có hạn (tên là "length"). 
 
-Chúng cho phép đọc và ghi bởi vài task khác nhau, và không theo một task một cách riêng biệt. Một queue thường là một FIFO nghĩa là các thành phần được đọc trong khi đã được ghi. Cách xử lý này phụ thuộc vào phương thức ghi: hai function ghi có thể được sử dung để ghi hoặc tại lúc bắt đầu hoặc lúc kết thúc queue đó.
-
 ## Signal Event
 Các signal event được sử dụng để đồng bộ các task tức là buộc các task phải bắt đầu thực thi tại lúc định nghĩa event.
 
@@ -24,13 +22,16 @@ Mỗi task được ấn định tối đa 32 signal event.
 
 Giới hạn: chỉ có thể sử dụng khi chỉ một task đó nhận được signal.
 
-## Việc đọc trong một queue
+## Message Queue
+Chúng cho phép đọc và ghi bởi vài task khác nhau, và không theo một task một cách riêng biệt. Một queue thường là một FIFO nghĩa là các thành phần được đọc trong khi đã được ghi. Cách xử lý này phụ thuộc vào phương thức ghi: hai function ghi có thể được sử dung để ghi hoặc tại lúc bắt đầu hoặc lúc kết thúc queue đó.
+
+### Việc đọc trong một queue
 Khi một task đơn đọc trong một queue, nó được chuyển tới trạng thái "Blocked" và đưa trở lại "Ready" ngay khi dữ liệu được ghi vào trong queue bởi một task khác hoặc một ngắt. Nếu có một số task cố gắng đọc một queue, task nào có mức ưu tiên cao nhất đọc đầu tiên. Cuối cùng, nếu có vài task có độ ưu tiên như nhau cố gắng đọc task, task yêu cầu đầu tiên được chọn. Một task cũng có thể được chỉ định một thời gian chờ tối đa để queue cho phép nó được đọc. Sau thời gian đó, task tự động chuyển lại trạng thái "Ready"
 
 ![](Untitled4.png)
-## Việc ghi trong một queue
+### Việc ghi trong một queue
 Việc ghi trong queue cũng tuân theo luật như việc đọc. Khi một task cố gắng ghi vào queue, nó phải chờ tới khi có được chỗ trống: task bị blocked cho tới khi task khác đọc queue và có khoảng trống.
-## Cách tạo queue
+### Cách tạo queue
 Độ dài của queue và độ rộng của nó (kích thước của các element của nó) được cho trước khi queue được tạo ra.
 * Bước 1: Định nghĩa queue
 ![](Untitled5.png)
@@ -65,7 +66,7 @@ Cả hai Task A và B đều có cùng một mức ưu tiên.
 4. Task B đọc một quá trị trong queue. Nó sẽ nhận giá trị đứng đằng trước của queue.
 5. Task B gỡ một item. Item thứ 2 được chuyển lên trước trong queue. 4 chỗ trống bây giờ sẵn có.
 
-## STM32CubeMX - Queue
+### STM32CubeMX - Queue
 ![](Untitled10.png)
 Các thành phần sau có thể sử đổi
 * Name
