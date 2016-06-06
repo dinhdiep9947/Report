@@ -71,6 +71,7 @@ Cả hai Task A và B đều có cùng một mức ưu tiên.
 ### STM32CubeMX - Queue
 ![](Untitled10.png)
 Các thành phần sau có thể sử đổi
+
 * Name
 * Size of queue
 * Size of item in queue
