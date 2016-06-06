@@ -34,7 +34,18 @@ Một counting semaphore là một semaphore mà có thể lấy được một 
   
 Task có thể giành được một semaphore
 > osSemaphoreWait(myCountingSem01Handle, osWaitForever);
->                     ID/Handle            time-out value
+
+Task có thể phóng thích một semaphore
+> osSemaphoreRelease(myCountingSem01Handle)
+
+![](Untitled15.png)
+Cả 3 task A, B, C đều có cùng mức ưu tiên. Semaphore có 2 token.
+
+1. Task C phát ra osSemaphoreWait() nhưng token semaphore đã bị lấy đi bởi task A và task B.
+2. Trạng thhais của task C được set là Waiting và Task A được bắt đầu. Task B là "Ready".
+3. Task B phát ra osSemaphoreRelease(). trạng thái task C được set là Ready. Khi mọi task đều có cùng mức ưu tiên, task B tiếp tục thực thi.
+4. Task C cuối cùng cũng được thực thi.
+
   
 
 
