@@ -2,6 +2,28 @@
 Queue la một kỹ thuật làm cơ sở cho mọi truyền thông các task và đồng bộ trong môi trường freeRTOS. Chúng là một chủ đề quan trọng không thể tránh được khi xây dựng những ứng dụng phức tạp với các task co-operating với task khác. Chúng được hiểu là để lưu trữ và độ dài dữ liệu có hạn (tên là "length"). 
 
 Chúng cho phép đọc và ghi bởi vài task khác nhau, và không theo một task một cách riêng biệt. Một queue thường là một FIFO nghĩa là các thành phần được đọc trong khi đã được ghi. Cách xử lý này phụ thuộc vào phương thức ghi: hai function ghi có thể được sử dung để ghi hoặc tại lúc bắt đầu hoặc lúc kết thúc queue đó.
+
+## Signal Event
+Các signal event được sử dụng để đồng bộ các task tức là buộc các task phải bắt đầu thực thi tại lúc định nghĩa event.
+
+Ví dụ trong một một ứng dụng máy giặt, task A điều khiển mô-tơ và task B điều khiển cảm biến nước đổ vào.
+
+* Task A sẽ cần chờ cho nước đổ đầy trước khi bắt đầu mô-tơ. Điều này có thể đạt được bằng cách sử dụng signal event.
+* Task A sẽ chờ signal event từ task B trước khi bắt đầu mô-tơ.
+* Task B sẽ gửi tín hiệu tới task A khi cảm biến nước phát hiện nước đã đạt đúng mức.
+
+![](Untitled18.png)
+Một task:
+
+* Có thể chờ một signal để set trước khi tiếp tục thực thi. Các task sẽ đi vào trạng thái WAITING cho tới khi tín hiệu được set.
+* Set một một tín hiệu hoặc nhiều bởi nhiều task khác nhau cho trước.
+
+Mỗi task được ấn định tối đa 32 signal event.
+
+Ưu điểm: nhanh hơn và sử dụng ít RAM hơn so với semaphore hay message queue.
+
+Giới hạn: chỉ có thể sử dụng khi chỉ một task đó nhận được signal.
+
 ## Việc đọc trong một queue
 Khi một task đơn đọc trong một queue, nó được chuyển tới trạng thái "Blocked" và đưa trở lại "Ready" ngay khi dữ liệu được ghi vào trong queue bởi một task khác hoặc một ngắt. Nếu có một số task cố gắng đọc một queue, task nào có mức ưu tiên cao nhất đọc đầu tiên. Cuối cùng, nếu có vài task có độ ưu tiên như nhau cố gắng đọc task, task yêu cầu đầu tiên được chọn. Một task cũng có thể được chỉ định một thời gian chờ tối đa để queue cho phép nó được đọc. Sau thời gian đó, task tự động chuyển lại trạng thái "Ready"
 
