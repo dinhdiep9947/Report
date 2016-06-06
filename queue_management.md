@@ -73,6 +73,10 @@ Các thành phần sau có thể sử đổi
 * Size of queue
 * Size of item in queue
 
+## Mail Queue
+Cũng gần giống với message queue nhưng dữ liệu truyền gồm có các khối bộ nhớ thay vì dữ liệu riêng lẻ. Các khối bộ nhớ cần được "cấp phát" (trước khi đưa dữ liệu vào) và làm trống (khi lấy dữ liệu ra). FreeRTOS sử dụng message queue bổ sung cho mail queue. 
+![](Untitled19.png)
+![](Untitled20.png)
 
 
 
