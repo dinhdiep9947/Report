@@ -25,7 +25,9 @@ Nhân kernel sẽ điều khiển việc chuyển các task. Nó lưu nội dung
 Kernel được bắt đầu khi sử dụng API osKernelStart(). Khi bắt đầu kernel sẽ tự động tạo một task mặc định được gọi là Idle Task.
 
 ## Cách tạo một Task
+
 *Các hàm sử dụng trong bài này là HAL API được tạo từ phần mêm CubeMX của ST*
+
 1.  Định nghĩa task 
 ![](Untitled1.png)
   a. Tên của task 
