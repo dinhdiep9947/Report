@@ -17,6 +17,7 @@ Một task có thể có một trong những trạng thái:
 * **INACTIVE (BLOCKED):** các task này không được tạo hoặc bị giới hạn trong trạng thái này. 
 ![](Untitled.png)
 Nhân kernel sẽ điều khiển việc chuyển các task. Nó lưu nội dung của task khi nó bị suspend (treo lơ lửng) và khôi phục lại khi task được resume. Kernel thực thi và hoàn thành việc chuyển task:
+
 * Sau một thời gian thực thi được định trước. 
 * Khi một sự kiện (event) mở ra một task có mức ưu tiên cai hơn xảy ra. (signal, queue, semaphore...)
 * Khi một task gọi osThreadYield() để báo cho kernel để chuyển task khác mà không phải chờ tới lúc kết thúc thời gian silce.
